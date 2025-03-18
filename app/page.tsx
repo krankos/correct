@@ -27,6 +27,8 @@ function AssistantContent() {
       {message with different tone 1} - **{tone 1}**
 
       {message with different tone 2}- **{tone 2}**
+
+      {improved message making it more clear} - **improved**
      ...
     `,
   });
