@@ -8,7 +8,7 @@ export async function POST(req: Request) {
   console.log({ messages, system, tools });
 
   const result = streamText({
-    model: groq("gemma2-9b-it"),
+    model: groq("llama-3.3-70b-versatile"),
     messages,
     system,
     tools: Object.fromEntries(
