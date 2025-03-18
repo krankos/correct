@@ -1,4 +1,4 @@
-import { openai } from "@ai-sdk/openai";
+import { groq } from "@ai-sdk/groq";
 import { jsonSchema, streamText } from "ai";
 
 export const maxDuration = 30;
@@ -8,7 +8,7 @@ export async function POST(req: Request) {
   console.log({ messages, system, tools });
 
   const result = streamText({
-    model: openai("gpt-4o-mini"),
+    model: groq("gemma2-9b-it"),
     messages,
     system,
     tools: Object.fromEntries(
