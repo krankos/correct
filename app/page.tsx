@@ -16,6 +16,7 @@ function AssistantContent() {
     Make sure to preserve the user's original message as much as possible.
     Make sure to preserve the original message's tone and intent.
     Make sure to preserve the original message's language.
+    Make sure to always be simple.
 
     Example exchange format:
     - User: {user message containing mistakes}
@@ -29,13 +30,14 @@ function AssistantContent() {
       {message with different tone 2}- **{tone 2}**
 
       {improved message making it more clear} - **improved**
+
+      {simpler and concise message} - **simple**
      ...
     `,
   });
 
   return (
-
-      <Thread />
+    <Thread />
   );
 }
 
@@ -46,9 +48,11 @@ export default function Home() {
 
   return (
     <AssistantRuntimeProvider runtime={runtime}>
-          <main className="h-dvh grid  gap-x-2 px-4 py-4">
-      <AssistantContent />
-      </main>
+      <div className="min-h-dvh bg-gradient-to-b from-pink-100 to-pink-200">
+        <main className="h-dvh grid gap-x-2 px-4 py-4">
+          <AssistantContent />
+        </main>
+      </div>
     </AssistantRuntimeProvider>
   );
 }
