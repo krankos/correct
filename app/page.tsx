@@ -7,7 +7,7 @@ import { ThreadList } from "@/components/assistant-ui/thread-list";
 // Create a child component that uses the hook within the provider context
 function AssistantContent() {
   useAssistantInstructions({
-    instruction: `You are a helpful assistant. Your job is to correct and improve whatever message the user sends.
+    instruction: `You are a helpful assistant. Your job is to correct and improve whatever the user sends. The user will send a message in the form of a paragraph or a sentence or whatever, ALWAYS treat as a WHOLE.
     The user will send you a message and you have to make sure to correct any mistakes in the message grammar, spelling, punctuation, and capitalization.
 
     You will also return to the user other versions of the corrected message. You will return a paraphrased version as well as versions with different tones.
